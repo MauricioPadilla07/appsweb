@@ -4,7 +4,7 @@ class Currency {
 
     constructor(code) {
         if(!Currency.#VALID_CODES.includes(code))
-            throw new Error(`Invalid code: ${code}. Must be one of ${Currency.#VALID_CODES}`);
+            throw new ValidationError(`Invalid code: ${code}. Must be one of ${Currency.#VALID_CODES}`);
         this.#code = code;
     }
 }
